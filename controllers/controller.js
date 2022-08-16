@@ -14,7 +14,7 @@ class Controller {
             let compare = compPassword(password, find.password)
             if(!compare) throw { name: "wrong" };
             
-            const payload = {id : find.id, role : find.role}
+            const payload = {id : find.id, role : find.role, username : find.username}
             const access_token = createToken( payload )
 
             res.status(200).json({access_token})

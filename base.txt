@@ -1,6 +1,7 @@
 -b development
 -b feature-login
 -b feature-register
+-b authentification
 
 # isi payload : id
 
@@ -19,4 +20,7 @@
 -400 "Password is require"
 -400 "Username is already exist"
 -400 "Email is already exist"
+
+/authen
+-401 "please login"
 

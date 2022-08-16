@@ -8,6 +8,8 @@ function error_handler(error, req, res, next){
         res.status(400).json({ message : error.errors[0].message})
     } else if (error.name == "SequelizeUniqueConstraintError") {
         res.status(400).json({ message : `${error.errors[0].path} alredy exixst`})
+    } else if( error.name == "no_token" ) {
+        res.status(401).json({ message : "please login"})
     }
 }
 
