@@ -1,0 +1,29 @@
+1. npm init -y
+2. npm i sequelize pg express bcryptjs jsonwebtoken cors && npm i -D sequelize-cli
+3. npx sequelize init && touch .gitignore
+
+- db:create --> config sudah betul
+- model:create --> paskal && singular, perhatikan att
+- db:migrate --> asosiasi, FK, validasi
+- seed:create
+- db:seed:all --> hashPass sebelum seeding
+
+4. mkdir controllers helpers && touch app.js router.js controller.js
+5. app --> [http://expressjs.com/en/starter/hello-world.html]
+    middlewares : (use)cors(), (use)urlencoded, (use)json()
+
+*. clue
+    - hash -- password, uniq(integer)
+    - compare -- pass ori x pass hashed
+    - createToken -- sign, payload, SK
+    - verifyToken -- verify, token, SK
+    - authen (baca token yg dibuat saat login)
+    - author (pengkondisina role)
+
+// 
+
+6. npm init vue@latest
+7. npm i axios, lalu axios instance [https://axios-http.com/docs/instance]
+
+jangan lupa export default
+contoh isi : data()(jgn lupa return), methods, emits, props, created()
