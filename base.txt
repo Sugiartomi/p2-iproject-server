@@ -1,4 +1,22 @@
 -b development
 -b feature-login
+-b feature-register
 
-belum buat env di jwt
+# isi payload : id
+
+! belum buat env di jwt
+
+
+/login
+-200 {access_token}
+-400 "Email/password is require"
+-400 "Invalid email/password"
+
+/register
+-201 {id, username}
+-400 "Username is require"
+-400 "Email is require"
+-400 "Password is require"
+-400 "Username is already exist"
+-400 "Email is already exist"
+
