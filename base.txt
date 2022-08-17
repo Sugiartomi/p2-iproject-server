@@ -2,6 +2,7 @@
 -b feature-login
 -b feature-register
 -b authentification
+-b feature-report
 
 # isi payload : id
 
