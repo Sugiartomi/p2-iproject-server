@@ -9,12 +9,12 @@
 ! belum buat env di jwt
 
 
-/login
+POST /login
 -200 {access_token}
 -400 "Email/password is require"
 -400 "Invalid email/password"
 
-/register
+POST /register
 -201 {id, username}
 -400 "Username is require"
 -400 "Email is require"
@@ -24,4 +24,62 @@
 
 /authen
 -401 "please login"
+
+GET /report
+headers : access_token
+-200 
+[
+    {
+        "id": 1,
+        "title": "banjir tahunan",
+        "description": "Permukiman warga kawasan Kebon Pala, Kelurahan Kampung Melayu, Kecamatan Jatinegara, Jakarta Timur, kembali terendam banjir luapan Kali Ciliwung.Ketinggian air sekarang sekitar satu meter. Banjir karena air kiriman dari Bogor dan Depok",
+        "victim": 300,
+        "status": "pending",
+        "location": "jakarta",
+        "UserId": 2,
+        "createdAt": "2022-08-17T01:51:32.748Z",
+        "updatedAt": "2022-08-17T01:51:32.748Z"
+    }
+]
+-500
+
+GET /report/:id
+headers : access_token
+-200 
+
+    {
+        "id": 1,
+        "title": "banjir tahunan",
+        "description": "Permukiman warga kawasan Kebon Pala, Kelurahan Kampung Melayu, Kecamatan Jatinegara, Jakarta Timur, kembali terendam banjir luapan Kali Ciliwung.Ketinggian air sekarang sekitar satu meter. Banjir karena air kiriman dari Bogor dan Depok",
+        "victim": 300,
+        "status": "pending",
+        "location": "jakarta",
+        "UserId": 2,
+        "createdAt": "2022-08-17T01:51:32.748Z",
+        "updatedAt": "2022-08-17T01:51:32.748Z"
+    }
+
+-500
+
+
+/patch report/:id
+200
+header acc
+{
+    "message": "success change status report with id 2",
+    "data": {
+        "id": 2,
+        "title": "orang hilang",
+        "description": "ada orang hilang setelah dikabarkan belanja sesuatu, sampai detik ini belum diketahui keberadaan dan motif dari khilangnya seseorang itu",
+        "victim": 1,
+        "status": "action",
+        "location": "malang",
+        "UserId": 2,
+        "createdAt": "2022-08-17T02:09:38.344Z",
+        "updatedAt": "2022-08-17T02:46:18.760Z"
+    }
+}
+
+-403 "you dont have permission to access"
+
 

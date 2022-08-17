@@ -1,6 +1,6 @@
 const { verifyToken } = require("../middleware/jwt");
 
-let Authentification =  (req, res, next) => {
+let Authentication =  (req, res, next) => {
 try {
       let { access_token } = req.headers;
       if (!access_token) throw { name: "no_token" };
@@ -21,4 +21,4 @@ try {
 };
 
 
-module.exports = Authentification
+module.exports = Authentication
