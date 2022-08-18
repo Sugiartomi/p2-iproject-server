@@ -1,5 +1,5 @@
 function error_handler(error, req, res, next){
-    console.log(error);
+    // console.log(error);
     if (error.name == "wrong") {
         res.status(400).json({ message: "Invalid email/password" });
     } else if ( error.name == "require") {
@@ -12,6 +12,10 @@ function error_handler(error, req, res, next){
         res.status(401).json({ message : "please login"})
     } else if( error.name == "forbidden") {
         res.status(403).json({ message : "you dont have permission to access"})
+    } else if( error.name == "undefined") {
+        res.status(404).json({ message : "content not found"})
+    } else {
+        res.status(500).json({ message : 'Internal server error'})
     }
 }
 

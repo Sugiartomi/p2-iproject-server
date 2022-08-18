@@ -86,6 +86,8 @@ class Controller {
       let id = req.params.id;
       let data = await Report.findOne({ where: { id }, include: User });
 
+      if(!data) throw { name : "undefined"}
+
       let loc = data.location;
       let APIkey = process.env.API_KEY;
       let date = data.createdAt.toISOString().substring(0, 10);

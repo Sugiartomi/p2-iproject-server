@@ -6,5 +6,61 @@
         "status" : "pending",
         "location" : "jakarta",
         "UserId" : 2
-    }
+    },
+	{
+		"title" : "Anak Hilang",
+		"description" : "hilang waktu beli permen",
+		"victim" : 1,
+		"status" : "pending",
+		"location" : "bandung",
+		"UserId" : 1
+	},
+	{
+		"title" : "orang hilang",
+		"description" : "ada orang hilang setelah dikabarkan belanja sesuatu, sampai detik ini belum diketahui keberadaan dan motif dari khilangnya seseorang itu",
+		"victim" : 1,
+		"status" : "pending",
+		"location" : "malang",
+		"UserId" : 2
+	},
+	{
+		"title" : "banjir tahunan",
+		"description" : "Permukiman warga kawasan Kebon Pala, Kelurahan Kampung Melayu, Kecamatan Jatinegara, Jakarta Timur, kembali terendam banjir luapan Kali Ciliwung.Ketinggian air sekarang sekitar satu meter. Banjir karena air kiriman dari Bogor dan Depok",
+		"victim" : 300,
+		"status" : "pending",
+		"location" : "jakarta",
+		"UserId" : 2
+	},
+	{
+		"title" : "Pesawat belum ketemu",
+		"description" : "Pesawat itu hilang saat melintasi Hump, sebuah rute di ujung timur pergunungan Himalaya, dalam perjalanan dari India ke China untuk untuk mengirimkan pasokan kepada pasukan China selama agresi Jepang (1931-1945), tulis situs thepaper.cn, mengutip beberapa sumber yang dekat dengan korban.",
+		"victim" : 140,
+		"status" : "pending",
+		"location" : "himalaya",
+		"UserId" : 1
+	},
+	{
+		"title" : "Pesawat hilang",
+		"description" : "Pesawat itu hilang saat melintasi Hump, sebuah rute di ujung timur pergunungan Himalaya, dalam perjalanan dari India ke China untuk untuk mengirimkan pasokan kepada pasukan China selama agresi Jepang (1931-1945), tulis situs thepaper.cn, mengutip beberapa sumber yang dekat dengan korban.",
+		"victim" : 140,
+		"status" : "pending",
+		"location" : "himalaya",
+		"UserId" : 1
+	},
+	{
+		"title" : "cek",
+		"description" : "cekcok",
+		"victim" : 6,
+		"status" : "pending",
+		"location" : "karawang",
+		"UserId" : 1
+	},
+	{
+		"title" : "anak hilang",
+		"description" : "hilang saat pulang sekolah",
+		"victim" : 1,
+		"status" : "pending",
+		"location" : "cianjur",
+		"UserId" : 1
+	}
 ]
